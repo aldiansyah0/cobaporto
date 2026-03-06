@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aidy - Web & Android Developer Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="script.css">
+</head>
+<body class="bg-[#020d11] text-gray-300 overflow-x-hidden selection:bg-emerald-500/30">
+
+    <!-- --- BACKGROUND ANIMASI --- -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] bg-emerald-600/10 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-600/10 blur-[120px] rounded-full"></div>
+        <div id="particles-container" class="absolute inset-0 opacity-20"></div>
+        <div class="absolute inset-0 opacity-[0.03] custom-grid"></div>
+    </div>
+
+    <!-- --- NAVBAR --- -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-2 group cursor-pointer">
+                <div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center font-bold text-black text-xl group-hover:rotate-12 transition-transform shadow-[0_0_15px_rgba(16,185,129,0.5)]">
+                    A!
+                </div>
+                <span class="font-bold text-white tracking-widest hidden sm:block uppercase">ALDIAN.Dev</span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8 text-[10px] tracking-[0.2em] font-black uppercase">
+                <a href="#home" class="hover:text-emerald-400 transition-colors">Beranda</a>
+                <a href="#about" class="hover:text-emerald-400 transition-colors">Tentang</a>
+                <a href="#education" class="hover:text-emerald-400 transition-colors">Pendidikan</a>
+                <a href="#skills" class="hover:text-emerald-400 transition-colors">Keahlian</a>
+                <a href="#portfolio" class="hover:text-emerald-400 transition-colors">Project</a>
+                <a href="#contact" class="hover:text-emerald-400 transition-colors">Kontak</a>
+            </div>
+
+            <a href="#contact" class="bg-emerald-500 text-black px-6 py-2 rounded-full text-sm font-bold hover:scale-105 transition-transform hover:shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+                Mulai Kerjasama
+            </a>
+        </div>
+    </nav>
+
+    <!-- --- HERO SECTION --- -->
+    <section id="home" class="relative pt-40 pb-20 px-6 min-h-screen flex items-center z-10">
+        <div class="container mx-auto text-center lg:text-left">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="lg:w-3/5" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest">Tersedia untuk Project Baru</span>
+                    </div>
+                    <h1 class="text-6xl lg:text-8xl font-black text-white mb-6 tracking-tighter leading-none">
+                        WEB & MOBILE <br />
+                        <span class="text-gradient">DEVELOPER.</span>
+                    </h1>
+                    <p class="text-gray-400 text-lg mb-10 max-w-2xl leading-relaxed">
+                        Membangun solusi digital yang efisien dengan integrasi sistem yang kuat. Memiliki fondasi manajemen administratif yang solid untuk memastikan setiap project terorganisir dengan sempurna.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <a href="#portfolio" class="bg-emerald-500 text-black px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:bg-emerald-400 transition-all hover:shadow-[0_0_30px_rgba(16,185,129,0.3)] group">
+                            Lihat Project <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#skills" class="bg-white/5 border border-white/10 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all">
+                            Keahlian Saya
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- POP OUT IMAGE SECTION -->
+                <div class="lg:w-2/5 flex justify-center" data-aos="zoom-out" data-aos-delay="200">
+                    <div class="pop-out-container">
+                        <!-- Latar belakang bingkai -->
+                        <div class="pop-out-base shadow-[0_0_50px_rgba(16,185,129,0.15)]"></div>
+                        <!-- Gambar yang "keluar" -->
+                        <img src="images/profile.jpeg" alt="Aldian Profile" class="pop-out-img">
+                        
+                        <!-- Floating Badges -->
+                        <div class="absolute -top-4 -right-4 bg-[#0a1a21] p-4 rounded-2xl border border-white/10 glass-effect shadow-xl z-30 animate-bounce-slow" style="animation-duration: 4s">
+                            <i data-lucide="code-2" class="text-emerald-500 w-6 h-6"></i>
+                        </div>
+                        <div class="absolute bottom-10 -left-10 bg-[#0a1a21] p-5 rounded-2xl border border-white/10 glass-effect shadow-xl z-30 flex items-center gap-3">
+                            <div class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></div>
+                            <div>
+                                <p class="text-[10px] text-gray-500 uppercase font-black tracking-widest leading-none">Status</p>
+                                <p class="text-white text-xs font-bold">Aktif Berkarya</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- EXPERIENCE & ABOUT --- -->
+    <section id="about" class="py-32 px-6 relative z-10 bg-white/[0.01]">
+        <div class="container mx-auto">
+            <div class="grid lg:grid-cols-2 gap-20 items-start">
+                <div data-aos="fade-up">
+                    <p class="text-emerald-500 font-mono text-sm mb-4 tracking-widest uppercase">// Pengalaman Kerja</p>
+                    <h2 class="text-4xl font-black text-white mb-10 tracking-tight leading-tight uppercase">Dari Administrasi <br>ke Teknologi</h2>
+                    
+                    <div class="space-y-6">
+                        <!-- Experience Card 1 -->
+                        <div class="experience-card p-6 bg-[#0a1a21]/50 border border-white/5 rounded-2xl transition-all duration-300 group">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Admin & Customer Service</h3>
+                                    <p class="text-emerald-500 text-sm font-semibold">Sektor Retail & Jasa</p>
+                                </div>
+                                <span class="text-[10px] font-black bg-white/5 px-4 py-2 rounded-full uppercase tracking-widest border border-white/10">2021 — 2022</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Bertanggung jawab atas manajemen data operasional, pelayanan pelanggan tingkat tinggi, dan koordinasi administrasi menggunakan perangkat lunak Windows & MS Office secara intensif.
+                            </p>
+                        </div>
+
+                        <!-- Experience Card 2 -->
+                        <div class="experience-card p-6 bg-[#0a1a21]/50 border border-white/5 rounded-2xl transition-all duration-300 group">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Fullstack Developer (Freelance)</h3>
+                                    <p class="text-emerald-500 text-sm font-semibold">Mandiri / Remote</p>
+                                </div>
+                                <span class="text-[10px] font-black bg-white/5 px-4 py-2 rounded-full uppercase tracking-widest border border-white/10">2022 — Sekarang</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Membangun solusi digital kustom menggunakan ekosistem Laravel untuk web dan Flutter untuk aplikasi Android yang berperforma tinggi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-emerald-500 font-mono text-sm mb-4 tracking-widest uppercase">// Kemampuan Sistem</p>
+                    <h2 class="text-4xl font-black text-white mb-10 tracking-tight uppercase">Penguasaan Alat Utama</h2>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        Mahir dalam mengoperasikan ekosistem <strong>Windows</strong> dan berbagai perangkat lunak pendukung produktivitas maupun pengembangan untuk hasil yang presisi.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col gap-4 hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all cursor-default group">
+                            <i data-lucide="layout" class="text-emerald-500 group-hover:scale-110 transition-transform"></i>
+                            <span class="font-black text-xs uppercase tracking-widest">MS. Office Suite</span>
+                        </div>
+                        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col gap-4 hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all cursor-default group">
+                            <i data-lucide="monitor" class="text-emerald-500 group-hover:scale-110 transition-transform"></i>
+                            <span class="font-black text-xs uppercase tracking-widest">Windows Expert</span>
+                        </div>
+                        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col gap-4 hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all cursor-default group">
+                            <i data-lucide="database" class="text-emerald-500 group-hover:scale-110 transition-transform"></i>
+                            <span class="font-black text-xs uppercase tracking-widest">MySQL Admin</span>
+                        </div>
+                        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col gap-4 hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all cursor-default group">
+                            <i data-lucide="smartphone" class="text-emerald-500 group-hover:scale-110 transition-transform"></i>
+                            <span class="font-black text-xs uppercase tracking-widest">Android Studio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- EDUCATION SECTION (NEW) --- -->
+    <section id="education" class="py-32 px-6 relative z-10 bg-[#0a1a21]/20">
+        <div class="container mx-auto">
+            <div class="flex flex-col items-center text-center mb-20" data-aos="fade-up">
+                <p class="text-emerald-500 font-mono text-sm mb-4 tracking-widest uppercase">// Academic Background</p>
+                <h2 class="text-5xl font-black text-white tracking-tighter uppercase mb-6">Riwayat Pendidikan</h2>
+                <div class="w-24 h-1.5 bg-emerald-500 rounded-full shadow-[0_0_15px_rgba(16,185,129,0.5)]"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Politeknik Negeri Madiun -->
+                <a href="https://pnm.ac.id" target="_blank" class="edu-card group block p-10 glass-effect border border-white/5 rounded-[3rem] hover:border-emerald-500/40 hover:-translate-y-4 transition-all duration-500" data-aos="fade-right" data-aos-delay="100">
+                    <div class="flex flex-col sm:flex-row gap-8 items-center sm:items-start text-center sm:text-left">
+                        <div class="edu-icon w-20 h-20 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-500 flex-shrink-0 transition-all duration-500 shadow-xl overflow-hidden">
+                            <!-- Logo Politeknik -->
+                            <i data-lucide="graduation-cap" class="w-10 h-10 transition-transform duration-500"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-black bg-emerald-500 text-black px-4 py-1 rounded-full uppercase tracking-widest mb-4 inline-block">2020 — 2023</span>
+                            <h3 class="text-2xl font-black text-white mb-2 group-hover:text-emerald-400 transition-colors uppercase leading-tight">Politeknik Negeri Madiun</h3>
+                            <p class="text-emerald-500 font-bold text-sm mb-4 uppercase tracking-tighter">Diploma III Teknologi Informasi</p>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-6">Fokus pada pengembangan aplikasi web, manajemen database, dan sistem informasi terintegrasi.</p>
+                            <span class="inline-flex items-center gap-2 text-[10px] font-black text-gray-500 group-hover:text-white transition-colors uppercase tracking-[0.2em]">
+                                Kunjungi Website <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- MAN 2 MAGETAN -->
+                <a href="https://man2magetan.sch.id" target="_blank" class="edu-card group block p-10 glass-effect border border-white/5 rounded-[3rem] hover:border-emerald-500/40 hover:-translate-y-4 transition-all duration-500" data-aos="fade-left" data-aos-delay="200">
+                    <div class="flex flex-col sm:flex-row gap-8 items-center sm:items-start text-center sm:text-left">
+                        <div class="edu-icon w-20 h-20 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-500 flex-shrink-0 transition-all duration-500 shadow-xl overflow-hidden">
+                            <!-- Logo Madrasah -->
+                            <i data-lucide="school" class="w-10 h-10 transition-transform duration-500"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-black bg-white/10 text-gray-400 px-4 py-1 rounded-full uppercase tracking-widest mb-4 inline-block">2017 — 2020</span>
+                            <h3 class="text-2xl font-black text-white mb-2 group-hover:text-emerald-400 transition-colors uppercase leading-tight">MAN 2 MAGETAN</h3>
+                            <p class="text-emerald-500 font-bold text-sm mb-4 uppercase tracking-tighter">Matematika dan Ilmu Pengetahuan Alam (MIPA)</p>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-6">Membangun logika berpikir kritis dan kemampuan analitis melalui kurikulum  yang intensif.</p>
+                            <span class="inline-flex items-center gap-2 text-[10px] font-black text-gray-500 group-hover:text-white transition-colors uppercase tracking-[0.2em]">
+                                Kunjungi Website <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- KEAHLIAN TEKNIS (TECH STACK) --- -->
+    <section id="skills" class="py-32 px-6 relative z-10">
+        <div class="container mx-auto">
+            <div class="text-center mb-20" data-aos="zoom-in">
+                <h2 class="text-5xl font-black text-white tracking-tighter uppercase">Tech Stack & Tools</h2>
+                <div class="w-20 h-1.5 bg-emerald-500 mx-auto mt-6 rounded-full shadow-[0_0_15px_rgba(16,185,129,0.5)]"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Skill Laravel -->
+                <div class="group p-10 glass-effect border border-white/5 rounded-[3rem] hover:border-emerald-500/40 hover:-translate-y-4 transition-all text-center" data-aos="fade-up" data-aos-delay="0">
+                    <img src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg" class="w-16 h-16 mx-auto mb-6 group-hover:rotate-12 transition-transform">
+                    <h3 class="font-bold text-white uppercase text-xs tracking-widest">Laravel</h3>
+                    <p class="text-[10px] text-emerald-500 mt-2 font-black">BACKEND MASTER</p>
+                </div>
+                <!-- Skill Flutter -->
+                <div class="group p-10 glass-effect border border-white/5 rounded-[3rem] hover:border-emerald-500/40 hover:-translate-y-4 transition-all text-center" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://cdn.worldvectorlogo.com/logos/flutter.svg" class="w-16 h-16 mx-auto mb-6 group-hover:rotate-12 transition-transform">
+                    <h3 class="font-bold text-white uppercase text-xs tracking-widest">Flutter & Dart</h3>
+                    <p class="text-[10px] text-emerald-500 mt-2 font-black">MOBILE NATIVE</p>
+                </div>
+                <!-- Skill MySQL -->
+                <div class="group p-10 glass-effect border border-white/5 rounded-[3rem] hover:border-emerald-500/40 hover:-translate-y-4 transition-all text-center" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://cdn.worldvectorlogo.com/logos/mysql-4.svg" class="w-16 h-16 mx-auto mb-6 group-hover:rotate-12 transition-transform">
+                    <h3 class="font-bold text-white uppercase text-xs tracking-widest">MySQL</h3>
+                    <p class="text-[10px] text-emerald-500 mt-2 font-black">DATABASE RELATIONAL</p>
+                </div>
+                <!-- Skill MS Office -->
+                <div class="group p-10 glass-effect border border-white/5 rounded-[3rem] hover:border-emerald-500/40 hover:-translate-y-4 transition-all text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-emerald-500 group-hover:text-black transition-all">
+                        <i data-lucide="file-spreadsheet" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="font-bold text-white uppercase text-xs tracking-widest">MS. Office</h3>
+                    <p class="text-[10px] text-emerald-500 mt-2 font-black">ADMINISTRATIVE PRO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- PORTFOLIO --- -->
+    <section id="portfolio" class="py-32 px-6 relative z-10 bg-[#0a1a21]/30">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20" data-aos="fade-right">
+                <div>
+                    <p class="text-emerald-500 font-mono text-sm mb-4 tracking-widest uppercase">// Project Unggulan</p>
+                    <h2 class="text-5xl font-black text-white tracking-tighter uppercase">Highlight Project</h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Proyek 1 -->
+                <div class="group relative glass-effect rounded-[3rem] overflow-hidden border border-white/5 hover:border-emerald-500/40 transition-all duration-500 shadow-2xl" data-aos="fade-up">
+                    <div class="aspect-video overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 opacity-60">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#020d11] to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-10 relative">
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-[9px] font-black bg-emerald-500/10 text-emerald-500 px-3 py-1 rounded-full uppercase border border-emerald-500/20">Laravel</span>
+                            <span class="text-[9px] font-black bg-blue-500/10 text-blue-500 px-3 py-1 rounded-full uppercase border border-blue-500/20">Admin System</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors">Sistem Inventaris Cerdas</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8">Solusi manajemen gudang yang menggabungkan kemudahan MS Excel dengan keamanan basis data MySQL untuk efisiensi admin.</p>
+                        <button class="flex items-center gap-3 text-emerald-500 font-black hover:gap-5 transition-all uppercase text-xs tracking-[0.2em] group/btn">
+                            LIVE PREVIEW <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Proyek 2 -->
+                <div class="group relative glass-effect rounded-[3rem] overflow-hidden border border-white/5 hover:border-emerald-500/40 transition-all duration-500 shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="aspect-video overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 opacity-60">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#020d11] to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-10 relative">
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-[9px] font-black bg-emerald-500/10 text-emerald-500 px-3 py-1 rounded-full uppercase border border-emerald-500/20">Flutter</span>
+                            <span class="text-[9px] font-black bg-emerald-500/10 text-emerald-500 px-3 py-1 rounded-full uppercase border border-emerald-500/20">Android</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors">CS-Connect Mobile</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8">Aplikasi pendukung Customer Service untuk mengelola tiket interaksi pelanggan secara mobile dan real-time.</p>
+                        <button class="flex items-center gap-3 text-emerald-500 font-black hover:gap-5 transition-all uppercase text-xs tracking-[0.2em] group/btn">
+                            LIVE PREVIEW <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- CONTACT / KERJASAMA FORM --- -->
+    <section id="contact" class="py-32 px-6 relative z-10 bg-white/[0.02]">
+        <div class="container mx-auto max-w-5xl">
+            <div class="flex flex-col lg:flex-row gap-20">
+                <div class="lg:w-2/5" data-aos="fade-right">
+                    <p class="text-emerald-500 font-mono text-sm mb-4 tracking-widest uppercase">// Contact Me</p>
+                    <h2 class="text-5xl font-black text-white mb-8 tracking-tighter uppercase leading-none">Mari <br>Bekerja Sama</h2>
+                    <p class="text-gray-400 mb-10 leading-relaxed">
+                        Punya proyek menarik atau butuh bantuan pengembangan sistem? Kirim pesan dan mari kita wujudkan ide Anda menjadi kenyataan.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-500 group-hover:bg-emerald-500 group-hover:text-black transition-all">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-gray-500 uppercase font-black tracking-widest">Email Resmi</p>
+                                <p class="text-white font-bold">ahmadfadly377@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-500 group-hover:bg-emerald-500 group-hover:text-black transition-all">
+                                <i data-lucide="message-circle"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-gray-500 uppercase font-black tracking-widest">WhatsApp</p>
+                                <p class="text-white font-bold">0896-9701-2061</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-3/5" data-aos="fade-left">
+                    <div class="glass-effect p-12 rounded-[3rem] border border-white/5 shadow-2xl relative overflow-hidden">
+                        <!-- Decorative element -->
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-[50px] rounded-full"></div>
+                        
+                        <form id="collaboration-form" class="space-y-6 relative z-10">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-[10px] font-black text-gray-500 uppercase tracking-widest">Nama Lengkap</label>
+                                    <input type="text" placeholder="Masukkan nama Anda" class="w-full p-5 rounded-2xl form-input text-white text-sm" required>
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-[10px] font-black text-gray-500 uppercase tracking-widest">Alamat Email</label>
+                                    <input type="email" placeholder="nama@perusahaan.com" class="w-full p-5 rounded-2xl form-input text-white text-sm" required>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-black text-gray-500 uppercase tracking-widest">Jenis Proyek</label>
+                                <div class="relative">
+                                    <select class="w-full p-5 rounded-2xl form-input text-white text-sm appearance-none cursor-pointer">
+                                        <option class="bg-[#0a1a21]">Web Development (Laravel)</option>
+                                        <option class="bg-[#0a1a21]">Android App (Flutter)</option>
+                                        <option class="bg-[#0a1a21]">Admin Support & Sistem</option>
+                                        <option class="bg-[#0a1a21]">Lainnya</option>
+                                    </select>
+                                    <i data-lucide="chevron-down" class="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none"></i>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-black text-gray-500 uppercase tracking-widest">Detail Kebutuhan</label>
+                                <textarea rows="4" placeholder="Ceritakan detail proyek atau kebutuhan Anda..." class="w-full p-5 rounded-2xl form-input text-white text-sm" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-6 rounded-2xl bg-emerald-500 text-black font-black uppercase tracking-[0.2em] text-xs hover:bg-emerald-400 transition-all shadow-[0_20px_40px_rgba(16,185,129,0.3)] flex items-center justify-center gap-4 group">
+                                Kirim Pesan <i data-lucide="send" class="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- FOOTER --- -->
+    <footer class="py-20 px-6 border-t border-white/5 text-center relative z-10 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent"></div>
+        <div class="container mx-auto">
+            <div class="w-16 h-16 bg-emerald-500 rounded-2xl flex items-center justify-center font-black text-black text-3xl mx-auto mb-10 shadow-[0_0_50px_rgba(16,185,129,0.3)] hover:rotate-12 transition-transform cursor-pointer">A!</div>
+            <div class="flex justify-center gap-10 mb-12">
+                <a href="https://www.instagram.com/anmetrn_/" class="text-gray-500 hover:text-emerald-500 transition-all transform hover:scale-125">
+                    <i data-lucide="instagram"></i>
+                </a>
+                <a href="https://github.com/aldiansyah0" class="text-gray-500 hover:text-emerald-500 transition-all transform hover:scale-125">
+                    <i data-lucide="github"></i>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-emerald-500 transition-all transform hover:scale-125">
+                    <i data-lucide="linkedin"></i>
+                </a>
+            </div>
+            <p class="text-gray-600 font-mono text-[10px] uppercase tracking-[0.5em] mb-4">&copy; 2026 Aldian.dev &middot; BUILD WITH CODE & PASSION</p>
+            <div class="flex justify-center items-center gap-2 opacity-30 group">
+                <div class="h-px w-8 bg-gray-700 group-hover:w-16 transition-all"></div>
+                <p class="text-[8px] text-gray-500 uppercase tracking-widest">Optimized for Interaction</p>
+                <div class="h-px w-8 bg-gray-700 group-hover:w-16 transition-all"></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inisialisasi AOS (Animate on Scroll)
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out-expo',
+            once: false,
+            mirror: true,
+            anchorPlacement: 'top-bottom'
+        });
+
+        // Inisialisasi Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Styling
+        const navbar = document.getElementById('navbar');
+        window.onscroll = () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-[#020d11]/80', 'backdrop-blur-xl', 'py-4', 'border-b', 'border-white/5');
+                navbar.classList.remove('py-6');
+            } else {
+                navbar.classList.remove('bg-[#020d11]/80', 'backdrop-blur-xl', 'py-4', 'border-b', 'border-white/5');
+                navbar.classList.add('py-6');
+            }
+        };
+
+        // Background Particles Generator
+        const container = document.getElementById('particles-container');
+        for (let i = 0; i < 50; i++) {
+            const p = document.createElement('div');
+            p.className = 'absolute bg-emerald-500/20 rounded-full animate-float';
+            const size = Math.random() * 4 + 1;
+            p.style.width = `${size}px`;
+            p.style.height = `${size}px`;
+            p.style.top = `${Math.random() * 100}%`;
+            p.style.left = `${Math.random() * 100}%`;
+            p.style.animationDuration = `${Math.random() * 15 + 10}s`;
+            p.style.animationDelay = `${Math.random() * 5}s`;
+            container.appendChild(p);
+        }
+
+        // Form Submit Handler (Simulation)
+        document.getElementById('collaboration-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = 'Memproses...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = 'Terkirim! <i data-lucide="check" class="ml-2 w-5 h-5"></i>';
+                lucide.createIcons();
+                e.target.reset();
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    lucide.createIcons();
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
